@@ -50,22 +50,46 @@
 	* Test 2
 	*/
 
-	var audios = {};
+	// var audios = {};
 
-	function init() {
-		$(this).find('.btn').css('color', 'red');
-		console.log('init');
-	    var sound = new Audio('audios/audio1.ogg');
-	    sound.load();
-	    audios['_1'] = sound;
-	}
+	// function init() {
+	// 	$(this).find('.btn').css('color', 'red');
+	// 	console.log('init');
+	//     var sound = new Audio('audios/audio1.ogg');
+	//     sound.load();
+	//     audios['_1'] = sound;
 
-	$('.beli-button > a').on('click', function() {
-		audios['_1'].play();
+	// 	document.addEventListener('touchstart', function () {
+	// 	    audios['_1'].play();
+	// 	});
+
+	// }
+
+	// $('.beli-button > a').on('click', function() {
+	// 	audios['_1'].play();
+	// });
+
+	// $('#btn_load_sounds').on('click', init);
+
+
+
+
+	/**
+	* Test 3
+	*/
+
+
+	var soundHandle = document.getElementById('soundHandle');
+
+	$(document).ready(function() {
+	    addEventListener('touchstart', function (e) {
+	        soundHandle.src = 'audio.mp3';
+	        soundHandle.loop = true;
+	        soundHandle.play();
+	        soundHandle.pause();
+	    });
 	});
 
-
-	$('#btn_load_sounds').on('click', init);
 
 
 })();
