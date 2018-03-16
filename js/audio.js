@@ -1,93 +1,34 @@
 (function() {
 
-	// var playingAudio;
+	var audios = [];
+	$('audio').each(function(index) {
+		audios.push(document.getElementById('sound_' + index));
+	});
 
-	// var onEnd = function() {
-	// 	playingAudio = null;
-	// }
+	function loadAllAudio() {
 
-	// function play(index) {
+		for(var i = 0; i < audios.length; i++) {
+			audios[i].src = 'audios/audio' + i + '.mp3';
+			audios[i].play();
+			audios[i].pause();
+		}
 
-	// 	if(playingAudio) playingAudio.pause();
+	}
 
-	// 	if (index == undefined) {
-	// 		rnd = Math.floor(Math.random() * Math.floor(2));
-	// 		index = rnd
-	// 	}
-
-	// 	fn = 'audios/audio' + index + '.ogg'
-	// 	console.log ("About to load " + fn)
-
-
-	// 	var audio = new Audio(fn);
-	// 	audio.addEventListener('canplaythrough', function() { 
-		
-	// 		audio.play();
-
-	// 		playingAudio = audio;
-	// 		playingAudio.onended = onEnd;
-
-	// 	}, false);
-
-
-	// }
-
-	// function pause(audio) {
-	// 	audio.pause();
-	// }
-
-	// $('.beli-button > a').on('click', function() {
-	// 	console.log('clicking');
-	// 	$(this).find('button').css('color', 'red');
-	// 	play($(this).find('button').attr('audio'));		
-	// });
-
-
-
-
-
-	/**
-	* Test 2
-	*/
-
-	// var audios = {};
-
-	// function init() {
-	// 	$(this).find('.btn').css('color', 'red');
-	// 	console.log('init');
-	//     var sound = new Audio('audios/audio1.ogg');
-	//     sound.load();
-	//     audios['_1'] = sound;
-
-	// 	document.addEventListener('touchstart', function () {
-	// 	    audios['_1'].play();
-	// 	});
-
-	// }
-
-	// $('.beli-button > a').on('click', function() {
-	// 	audios['_1'].play();
-	// });
-
-	// $('#btn_load_sounds').on('click', init);
-
-
-	/**
-	* Test 3
-	*/
-
-
-	var soundHandle = document.getElementById('soundHandle');
-
-    addEventListener('touchstart', function (e) {
-        soundHandle.src = 'audios/audio1.mp3';
-        // soundHandle.loop = true;
-        soundHandle.play();
-        soundHandle.pause();
+    addEventListener('touchstart', function () {
+    	console.log('touchstart');
+    	loadAllAudio();
     });
 
     $('.beli-button > a').on('click', function() {
-    	soundHandle.play();
+    	var index = $(this).find('button').attr('audio');
+    	console.log('playing audio' + index);
+    	audios[index].play();
     });
+
+    (function init() {
+    	loadAllAudio();
+    })();
+
 
 })();

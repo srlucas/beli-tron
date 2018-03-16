@@ -15,10 +15,16 @@
 		<link href="lib/animate/animate.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 		<link href="css/material-design.css" rel="stylesheet">
-		<link href="css/arcade-buttons.css" rel="stylesheet">
+
+		<!-- <link href="css/arcade-buttons-lg.css" rel="stylesheet"> -->
+		<link rel="stylesheet" media="screen and (min-device-width: 992px)" href="css/arcade-buttons-lg.css" />
+		<link rel="stylesheet" media="screen and (max-device-width: 992px)" href="css/arcade-buttons-sm.css" />
+
+
 		<script src="lib/jquery/jquery-3.2.1.min.js"></script>
 
-		<audio id="soundHandle" style="display:none;"></audio>
+		<audio id="sound_0" style="display:none;"></audio>
+		<audio id="sound_1" style="display:none;"></audio>
 
 	</head>
 
@@ -46,31 +52,37 @@
 
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<div class="beli-button">
-					<a href="#"><button class="push--flat"></button></a>
+					<a href="#"><button audio="0" class="push--flat"></button></a>
 				</div>
 			</div>
 
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<div class="beli-button">
-					<a href="#"><button audio="2" class="push--flat"></button></a>
+					<a href="#"><button audio="1" class="push--flat"></button></a>
 				</div>
 			</div>
 
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<div class="beli-button">
-					<a href="#"><button audio="3" class="push--flat"></button></a>
+					<a href="#"><button audio="0" class="push--flat"></button></a>
 				</div>
 			</div>
 
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<div class="beli-button">
-					<a href="#"><button audio="1" class="btn btn-primary">PLAY</button></a>
+					<a href="#"><button audio="0" class="push--flat"></button></a>
 				</div>
 			</div>
 
 		</section>
 
 	</div>
+
+	<!-- FOOTER -->
+	<div class="footer">
+		<p style="font-size: 20px" class="text-center">Made with love by the Gen2 crew</p>
+	</div>
+
 
 	<script src="js/audio.js?v=1"></script>
 
