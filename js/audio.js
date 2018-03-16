@@ -53,7 +53,7 @@
 	var audios = {};
 
 	function init() {
-		$(this).css('color', 'red');
+		$(this).find('.btn').css('color', 'red');
 		console.log('init');
 	    var sound = new Audio('audios/audio1.ogg');
 	    sound.load();
