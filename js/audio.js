@@ -32,7 +32,7 @@
 
 	$('.beli-button > a').on('click', function() {
 		console.log('clicking');
-		alert('click!');
+		$(this).find('button').css('color', 'red');
 		play($(this).find('button').attr('audio'));		
 	});
 
