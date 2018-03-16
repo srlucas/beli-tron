@@ -10,7 +10,15 @@
 
 		if(playingAudio) playingAudio.pause();
 
-		var audio = new Audio('audios/audio'+ index +'.ogg');
+		if (index == undefined) {
+			rnd = Math.floor(Math.random() * Math.floor(2));
+			index = rnd
+		}
+
+		fn = 'audios/audio' + index + '.ogg'
+		console.log ("About to load " + fn)
+		var audio = new Audio(fn);
+
 		audio.play();
 
 		playingAudio = audio;
@@ -27,6 +35,3 @@
 	});
 
 })();
-
-
-
