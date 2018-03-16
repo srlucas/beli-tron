@@ -55,7 +55,7 @@
 	function init() {
 		$(this).find('.btn').css('color', 'red');
 		console.log('init');
-	    var sound = new Audio('audios/audio1.ogg');
+	    var sound = new Audio('audios/audio1.mp3');
 	    sound.load();
 	    audios['_1'] = sound;
 	}
