@@ -17,12 +17,18 @@
 
 		fn = 'audios/audio' + index + '.ogg'
 		console.log ("About to load " + fn)
+
+
 		var audio = new Audio(fn);
+		audio.addEventListener('canplaythrough', function() { 
+		
+			audio.play();
 
-		audio.play();
+			playingAudio = audio;
+			playingAudio.onended = onEnd;
 
-		playingAudio = audio;
-		playingAudio.onended = onEnd;
+		}, false);
+
 
 	}
 
