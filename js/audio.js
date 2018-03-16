@@ -79,15 +79,15 @@
 
 	var soundHandle = document.getElementById('soundHandle');
 
-	$(document).ready(function() {
-	    addEventListener('touchstart', function (e) {
-	        soundHandle.src = 'audio.mp3';
-	        soundHandle.loop = true;
-	        soundHandle.play();
-	        soundHandle.pause();
-	    });
-	});
+    addEventListener('touchstart', function (e) {
+        soundHandle.src = 'audios/audio1.mp3';
+        // soundHandle.loop = true;
+        soundHandle.play();
+        soundHandle.pause();
+    });
 
-
+    $('.beli-button > a').on('click', function() {
+    	soundHandle.play();
+    });
 
 })();
