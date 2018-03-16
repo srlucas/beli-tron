@@ -30,8 +30,9 @@
 		audio.pause();
 	}
 
-	$('.beli-button button').on('click', function() {
-		play($(this).attr('audio'));		
+	$('.beli-button > a').on('click', function() {
+		console.log('clicking');
+		play($(this).find('button').attr('audio'));		
 	});
 
 })();
