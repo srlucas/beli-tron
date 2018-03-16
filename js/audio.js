@@ -32,6 +32,7 @@
 
 	$('.beli-button > a').on('click', function() {
 		console.log('clicking');
+		alert('click!');
 		play($(this).find('button').attr('audio'));		
 	});
 
