@@ -13,6 +13,10 @@
 			audios[i].pause();
 		}
 
+		audios[0].src = 'audios/tagufiao.mp3';
+		audios[0].play();
+		audios[0].pause();
+
 	}
 
     addEventListener('touchstart', function () {
