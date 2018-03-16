@@ -1,0 +1,36 @@
+h1, h2, h3 {
+	font-family: 'Mina', sans-serif;
+}
+
+span, label, div, p {
+	font-family: 'Roboto', sans-serif;
+}
+
+/**
+* Backgrounds
+*/
+
+.btn {
+	border-radius: 0;
+	border: none;
+}
+
+.btn-primary {
+	background-color: #2196F3;
+}
+
+/**
+* Sections
+*/
+
+#section_header {
+	padding-top: 7em;
+	padding-bottom: 7em;
+}
+
+
+#section_buttons {
+	text-align: center;
+}
+
+
