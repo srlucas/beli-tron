@@ -22,7 +22,7 @@
 
     $('.beli-button > button').on('click', function() {
     	var index = $(this).attr('audio');
-    	if(typeof index == 'undefined') index = Math.floor(Math.random() * 10);
+    	if(typeof index == 'undefined') index = Math.floor(Math.random() * 12);
     	console.log('playing audio' + index);
     	audios[index].play();
     });
